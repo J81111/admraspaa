@@ -26,7 +26,7 @@ $db_name = ltrim($dbopts['path'], '/');
 
 try {
     // 4. Monta a string de conexão (DSN) para o PDO e cria a conexão
-    $dsn = "pgsql:host=$host;port=$port;dbname=$db_name";
+    $dsn = "pgsql:host=$host;port=$port;dbname=$db_name;sslmode=require";
     $pdo = new PDO($dsn, $username, $password);
 
     // Configura o PDO para lançar exceções em caso de erro
